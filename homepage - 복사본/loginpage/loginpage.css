@@ -1,10 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 div{
     margin-top: 15px;
+    text-align: center;
 }
 
 body{
@@ -21,23 +23,70 @@ body, html {
 }
 
 .loginForm{
-    border-radius: 5%;
+    width: 550px;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
     padding: 10% 10%;
 }
 
-.inputArea{
-    color:#fff;
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px); /* 폭을 부모 요소의 100%에서 내부 패딩을 뺀 값으로 설정 */
+    padding: 5px;
+    margin-bottom: 10px; /* 입력 필드 사이에 간격 추가 */
+    box-sizing: border-box; /* 내부 패딩을 포함한 전체 너비로 요소 크기 계산 */
+    border-radius: 5px; /* 테두리 모서리를 둥글게 처리 */
+    transition: all 0.7s ease;
 }
 
-.submit input{
+input[type="password"]:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.05);
+}
+
+input[type="text"]:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.05);
+}
+
+
+button[type="submit"]{
     width: 100%;
-    
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: rgb(22, 22, 235);
+    border-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 5px black;
+    transition: all 0.7s ease;
+    color:#fff
 }
 
-h2{
+button:hover{
+    background-color: rgb(14, 14, 153);
+    box-shadow: 0 0 10px black;
+    transform: scale(0.95);
+}
+
+h1{
     text-align: center;
     color:#fff;
+    font-weight: bold;
+}
+
+a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color:#fff;
+}
+
+label{
+    color:#fff;
+    font-size: 20px;
     font-weight: bold;
 }

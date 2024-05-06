@@ -10,27 +10,31 @@
 <body>
     <div class="loginForm">
         <form action="" method="get">
-            <h2>login</h2>
+            <h1>login</h1>
             <table>
+                <!-- 아래부터 아이디 받는 부분  -->
                 <div class="inputArea">
                     <tr>
                         <td><label for="username">username</label></td>
                         <td><input id="username" type="text" name="username" value="" placeholder="username"></td>
                     </tr>
                 </div>
+                <!-- 아래부터 비밀번호 받는 부분 -->
                 <div class="inputArea">
                     <tr>
                         <td><label for="password">password</label></td>
                         <td><input id="password" type="password" name="password" value="" placeholder="password"></td>
                     </tr>
                 </div>
+                <!-- 아래부터 submit 기능 부분 -->
                 <div class="submit">
                     <tr>
-                        <td colspan="2"><input type="submit" id="submit" value="로그인"></td>
+                        <td colspan="2"><button type="submit" onclick="loginAction()">로그인</button></td>
                     </tr>
                 </div>
             </table>
-            <a>회원가입</a>
+            <!-- 회원가입 페이지 모달  -->
+            <a href="#">회원가입</a>
         </form>
     </div>
 </body>
