@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        {% for result in results %}
+        <a href="/{{ table }}/{{ result['title']}}/{{result['id']}}">{{result['title']}}</a>
+        <br />
+        {% endfor %}
+        <br /><br />
+        {% if total_page <= 5 %} 
+            {% for p in range(1, total_page + 1) %}
+                <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+            {% endfor %} 
+        {% else %}
+            {% if page <= 2 %}
+                {% for p in range(1, 6) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+                {% endfor %}
+            {% elif page >= 3 and page + 2 <= total_page %}
+                {% for p in range(page -2, page + 3) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+                {% endfor %}
+            {% elif page + 1 == total_page %}
+                {% for p in range(page - 3, page + 2) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p  }}</a>
+                {% endfor %}
+            {% elif page == total_page %}
+                {% for p in range(page -+ 4, page + 1) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+
+        <form action="/{{ table }}/create" method="get">
+            <button>create post</button>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <h1>{{ result['title'] }}</h1>
+        <h3>{{ result['article'] }}</h3>
+        <img src="{{ result['image'] }}" alt="Post image">
+        image route: {{ result['image'] }}
+
+        <h5>{{ result['recommand'] }}</h5>
+        <form action="/{{ table }}/{{ title}}/{{id}}/update_page">
+            <button>update</button>
+        </form>
+        <form action="/{{ table }}/{{ title }}/{{id}}/delete">
+            <button>delete</button>
+        </form>
+        <form action="/{{ table }}/{{ title }}/{{id}}/recommand">
+            <button>recommand</button>
+        </form>
+        <form action="/{{ table }}/{{ title }}/{{id}}/comment" method="post">
+            <input type="text" name="nickname" value="nickname">
+            <input type="password" name="password">
+            <textarea name="article">article area</textarea>
+            <button>summit</button>
+        </form>
+        {% for comment in comment_result %}
+        <h3>{{ comment['nickname'] }}</h3>
+        <h3>{{comment['date'] }}</h3>
+        <h5>{{comment['article'] }}</h5>
+
+        {% endfor %}
+    </body>
+</html>
