@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- update page -->
+        <form action="/{{ table }}/{{ title }}/{{id}}/update_page/update" method="post" enctype="multipart/form-data">
+            <textarea name="title">{{ result['title']}}</textarea>
+            <textarea name="article">{{ result['article']}}</textarea>
+            <input type="file" name="image">
+            <br />
+            <button>submmit</button>    
+        </form>
+    </body>
+</html>

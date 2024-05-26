@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif ;
+}
+
+.loginform{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+.gradient-border {
+    margin-top: 20px;
+    border: 1px solid rgb(226, 225, 225);
+    border-radius: 23px;
+    padding: 20px 40px 35px 40px;  /* 선택적인 내부 여백(padding) 추가 */
+    box-shadow: 0 2px 4px rgb(210, 210, 210);
+}
+
+form img{
+    width: 124px; 
+    margin-left: 109px;
+    
+}
+
+.id-area input{
+    width:250px;
+    height: 25px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    background-color: rgb(235, 232, 232);
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: 0 3px 5px rgb(174, 173, 173);
+    transition: transform 0.7s ease-in-out;
+}
+
+.pw-area input{
+    width:250px;
+    height: 25px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    background-color: rgb(235, 232, 232);
+    align-items: center;
+    margin-top: 15px;
+    box-shadow: 0 3px 5px rgb(174, 173, 173);
+    transition: transform 0.7s ease-in-out;
+}
+
+.btn button{
+    width:266px;
+    height: 41px;
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 35px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 5px rgb(174, 173, 173);
+    transition: transform 0.7s ease-in-out;
+}
+
+.id-area input:hover, .pw-area input:hover, .btn button:hover{
+    transform: scale(0.98);
+    box-shadow: 0 3px 7px rgb(123, 122, 122);
+}
+
+.bottom{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.bottom a{
+    text-decoration: none;
+    transition: text-shadow 0.7s ease;
+    color:rgb(170, 168, 168);
+    font-weight: bold;
+}
+
+.bottom a:hover{
+    text-shadow:0 0 5px rgb(92, 92, 92);
+}
