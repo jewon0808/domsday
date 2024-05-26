@@ -80,6 +80,3 @@ memu.addEventListener("mouseenter", function () {
   }
 });
 
-if (Math.floor(Math.random() * 10) >= 5) {
-  document.querySelector(".king").style = "display:auto";
-}

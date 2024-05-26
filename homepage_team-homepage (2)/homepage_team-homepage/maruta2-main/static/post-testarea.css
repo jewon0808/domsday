@@ -45,7 +45,7 @@ h1{
 }
 
 .createrArea{
-    display: flex;
+    display: none;
     justify-content: center;
     margin: 0px 10px;
 }
@@ -133,11 +133,19 @@ h1{
 .recommand form input:focus{
     outline:none;
 }
+.c{
+    display: flex;
+    justify-content: left;
+    margin: 0 4%;
+}
+.c label{
+    margin: 0 10px;
+}
 
 .b{
     display: flex;
     justify-content: center;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
 }
 
 form #review{
@@ -152,9 +160,11 @@ form #review{
 .a{
     display: flex;
     justify-content: right;
+    margin: 0 5%;
 }
 
 #writetext{
+
     width: 90px;
     height: 40px;
     background-color: #0866ff;

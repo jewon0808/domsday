@@ -83,3 +83,33 @@ memu.addEventListener("mouseenter", function () {
 if (Math.floor(Math.random() * 10) >= 5) {
   document.querySelector(".king").style = "display:auto";
 }
+
+const createArea = document.querySelector(".createrAreaPw form");
+
+createArea.addEventListener("submit", function(event){
+  event.preventDefault()
+  const input = document.querySelector("#contentpw");
+  const pw = input.value;
+  const data = {
+    password: pw,
+  }
+
+  fetch("url",{
+    method: "post",
+    headers: {
+      "Content-Type": "application/Json",
+    },
+    body: JSON.stringify(data),
+  })
+  .then((res)=>{
+    return res.json();
+  })
+  .then((data)=>{
+    if(data.result == "true"){
+      const a = document.querySelector(".createrArea");
+      a.style.display = flex;
+    }else{
+      alert("글 비밀번호를 다시 확인해보세요.");
+    }
+  })
+});

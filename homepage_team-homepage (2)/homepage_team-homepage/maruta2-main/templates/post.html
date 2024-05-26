@@ -76,7 +76,7 @@
             <!-- 글 비밀번호 성공하면 json result = "ture" munja-->
           <form action="{{ table }}/{{ title}}/{{id}}/password" method="post">
             <label for="contentpw">글 비밀번호</label>  
-            <input type="password" id="contentpw" name="password">
+            <input type="password" id="contentpw" name="password" value="">
             <input type="submit" value="글 수정하기">
           </form>
         </div>
@@ -105,12 +105,13 @@
         <!-- 댓글 입력 창 -->
         <form action="/{{ table }}/{{ title }}/{{id}}/comment" method="post">
             <!-- nickname max hanguel 15 -->
-            
+            <div class="c">
               <label for="nickname">사용할 닉네임</label>
               <input type="text" id="nickname" name="nickname" value="">
               <!-- password max english 30, hanguel 15 -->
               <label for="textpw">글 비밀번호</label>
               <input type="password" id="textpw" name="password">
+            </div>
               <br>
             <div class="b">
              <!-- article max hanguel 150 -->
