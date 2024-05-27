@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> {{ result_game.title }}</h1>
+    <h3> {{ result_game.article }}</h3>
+    <form action="/post/post_update/{{ result_game.title}}" method="get">
+        <button>change</button>
+    </form>
+    <form action="/post/post_delete/{{ result_game.title}}" method="get">
+        <button>delete</button>
+    </form>
+</body>
+</html>
