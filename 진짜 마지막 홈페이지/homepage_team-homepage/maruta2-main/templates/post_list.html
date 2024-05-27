@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <link rel="stylesheet" href="../static/post_list.css" />
+    </head>
+    <body>
+        <div class="top">
+          <div class="main-image">
+            <a href="/main">
+              <img src="../static/대표 로고.png" alt="" />
+            </a>
+          </div>
+            <div class="menu">
+              <div id="f1">
+                <a href=""
+                  ><img src="../static/설정 바.png" alt="3line" width="50px"
+                /></a>
+              </div>
+              <div id="f2">
+                <!-- 개인정보  -->
+                <a href=""
+                  ><img src="../static/개인설정.png" alt="개인정보" width="40px"
+                /></a>
+              </div>
+              <div id="f3">
+                <!-- 로그아웃e -->
+                <a href=""
+                  ><img src="../static/로그아웃.png" alt="" width="40px"
+                /></a>
+              </div>
+              <div id="f4">
+                <!-- 제거 할 부분 -->
+                <a href=""
+                  ><img src="../static/문의.png" alt="로그아웃" width="40px"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-bar">
+            <nav>
+              <a href="/main">홈 화면</a>
+              <a href="/lists/game/1">게임 게시판</a>
+              <a href="/lists/music/1">음악 게시판</a>
+              <a href="/lists/japan/1">일본 게시판</a>
+              <a href="/lists/computer/1">학업 게시판</a>
+              <a href="/lists/talk/1">잡담 게시판</a>
+            </nav>
+          </div>
+          <div class="text">
+            <h2 id="name"></h2>
+          </div>
+
+
+        <!-- 글 리스트 (10개) -->
+        {% for result in results %}
+        <a href="/{{ table }}/{{ result['title']}}/{{result['id']}}">{{result['title']}}</a>
+        <br />
+        {% endfor %}
+
+
+        <br /><br />
+
+
+        <!-- 페이지 네비게이션 (1 2 3 4 5...) -->
+        {% if total_page <= 5 %} 
+            {% for p in range(1, total_page + 1) %}
+                <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+            {% endfor %} 
+        {% else %}
+            {% if page <= 2 %}
+                {% for p in range(1, 6) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+                {% endfor %}
+            {% elif page >= 3 and page + 2 <= total_page %}
+                {% for p in range(page -2, page + 3) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+                {% endfor %}
+            {% elif page + 1 == total_page %}
+                {% for p in range(page - 3, page + 2) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p  }}</a>
+                {% endfor %}
+            {% elif page == total_page %}
+                {% for p in range(page -+ 4, page + 1) %}
+                    <a href="/lists/{{ table }}/{{ p }}">{{ p }}</a>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+
+        <!-- 글 생성하기 버튼 -->
+        <form action="/{{ table }}/create" method="get">
+            <button>create post</button>
+        </form>
+        <script src="../static/post_list.js"></script>
+    </body>
+</html>
