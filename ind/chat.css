@@ -1,0 +1,19 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    transition: background-color 0.2s;
+}
+
+.content {
+    width: 100%;
+}
+
+.spacer {
+    height: 2000px; /* Increase this value to enable more scrolling */
+}

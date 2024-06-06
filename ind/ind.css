@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #161617;
+    height: 4500px;
+    transition: background-color 0.2s;
+}
+
+.stop{
+    position: fixed;
+    top:0;
+    z-index: 1000; 
+    
+}
+
+.first{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 5s ease-in-out;
+    color:#c1c1c1;
+}
+
+div{
+    margin: 400px 0 500px 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+    color:#b7b7b7;
+}
+.gradient-text {
+    font-size: 3em;
+    background: linear-gradient(to right, rgb(248, 246, 246), rgb(24, 24, 24));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.onloadText{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imgarea{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 84%;
+    margin: 0 8% 0 8% ;
+}
+
+.m1{
+    opacity: 0;
+    transition: all 2s ease-in-out;
+}
+.m1 h2{
+    margin: 3px 0;
+}
+
+.content {
+    width: 100%;
+}
+
+.spacer {
+    height: 2000px; /* Increase this value to enable more scrolling */
+}
+
+#centered-link {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #161617; /* 링크의 색상 변경 */
+    font-weight: bold;
+    transition: all 0.8s ease-in-out;
+  }
+
+  #centered-link:hover{
+    text-shadow: 0 5px 15px #7b4949;
+
+  }
